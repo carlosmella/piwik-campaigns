@@ -1,0 +1,16 @@
+{
+  "name": "Campaigns",
+  "version": "0.1.0",
+  "description": "Plugin para gestionar campañas publicitarias",
+  "theme": false,
+  "require": {
+    "piwik": ">=2.14.2"
+  },
+  "authors": [
+    {
+      "name": "Piwik",
+      "email": "",
+      "homepage": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{% import 'ajaxMacros.twig' as ajax %}
+{% block content %}
+	<h2> Añadir Campaña </h2>
+	<form id="formCampañas">
+	<div id="formC">	
+	<div id="linea">	<label> Nombre de la campaña:</label>
+		<input id="nombre" type="text"/ placeholder="Nombre" class="required"> </div></br>
+	<div id="linea">	<label> Url destino:</label>
+		<input id="url" type="text" placeholder="URL destino" class="required"/></div> 
+	</div>
+	<div class="entityInlineHelp">
+		<p> La URL de destino es  la URL a la que desea que accedan los usuaios a través de su campaña.</p> 
+	</div>
+		<input id="submitCampaña" type="button" value="Añadir" class="submit"/>
+	</form>
+
+	<h2> Lista de Campañas </h2>
+	<div id="listaCampañas">
+		{% if campañas %}
+			<table class="dataTable entityTable">
+			<tr>
+			<td><strong>Nombre Campaña</strong></td> 
+			<td><strong> Url destino </strong></td>
+			<td><strong> Url de la  campaña </strong></td>
+			<td><strong> Eliminar</strong></td>
+			</tr>
+		{% endif %}
+			{% for campaña in campañas %}
+				<tr>
+				<td> {{ campaña.nombre }} </td> 
+				<td> {{ campaña.urlDestino }} </td> 
+				<td> {{ campaña.url }} </td> 
+				<td> <a id="eliminarCampaña" value="{{campaña.id}}"> <img src="plugins/Morpheus/images/ico_delete.png" border="0" >Eliminar</a> </br> </td>
+				</tr>
+	 
+		{% else %}
+			No se encontraron campañas
+	
+			{% endfor%}
+			</table>	
+	</div>
+
+{% endblock %}
+
+{{ ajax.loadingDiv('ajaxLoading') }}

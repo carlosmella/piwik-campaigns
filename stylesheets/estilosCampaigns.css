@@ -1,0 +1,28 @@
+#formCampañas{
+	clear:both;
+	overflow: auto;
+}
+#formC {
+	overflow: auto;
+}
+#linea {
+	display:inline;
+	margin-bottom: 1%;
+	width: 30%;
+	float: left;
+	clear: both;
+}
+#linea label,a {
+	align-self: center;
+}
+#linea input {
+	margin-left: 5% !important;
+	float:right;
+}
+#submitCampaña{
+	float:left;
+	margin-left: 25%;	
+}
+.empty{
+	border: 1px solid red !important;
+}
